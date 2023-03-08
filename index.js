@@ -1,19 +1,29 @@
 import express from "express";
 
-const url = "https://api.visualthinking.fdnd.nl/api/v1/methods?first=100";
-const data = await fetch(url).then((response) => response.json());
+const url = "https://api.visualthinking.fdnd.nl/api/v1/";
 
 // Maak een nieuwe express app
 const app = express();
 
 // Stel in hoe we express gebruiken
 app.set("view engine", "ejs");
-app.set("views", "./public/views");
+app.set("views", "./views");
 app.use(express.static("public"));
 
 // Maak een route voor de index
-app.get("/", function (req, res) {
-  res.render("index", data);
+app.get("/", (request, response) => {
+  let methodsUrl = url + "/methods?first100";
+  fetchJson(methodsUrl).then((data) => {
+    response.render("index", data);
+  });
+});
+
+app.get("/werkwijze", (request, response) => {
+  let slug = request.query.werkwijzeSlug || "roadmap";
+  let werkwijzeUrl = url + "/werkwijze/" + slug;
+  fetchJson(werkwijzeUrl).then((data) => {
+    response.render("werkwijze", data);
+  });
 });
 
 // Stel het poortnummer in en start express
