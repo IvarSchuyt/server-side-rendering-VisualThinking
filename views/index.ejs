@@ -1,18 +1,20 @@
 <%- include('./partials/head') %> 
 
-<h1>Overzicht werkvormen  </h1>
+<h1>Overzicht werkvormen</h1>
 
-<% methods.forEach(method => { %>
-<article>
-  <h2><%= method.title %></h2>
 
+<main class="layout">
+
+  <% methods.forEach(method => { %>
+  <article>
+    <h2><%= method.title %></h2>
+    <img src="<%= method.template?.url %>" class="template" alt="foto van <%= method.title %>" />
     <% method.categories.forEach(category => { %>
-    <p> <%= category.title %> </p>    
-    <% }) %> 
-
-  <img src="<%= method.template?.url %>" class="templates" alt="foto van deze werkvorm" />
-</article>
-<% }) %> 
-
+      <span class="categories-hidden"> <%= category.title %> </span>    
+      <% }) %> 
+  </article>
+  <% }) %> 
+  
+</main>
 
 <%- include('./partials/foot') %>
