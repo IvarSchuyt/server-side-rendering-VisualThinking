@@ -3,3 +3,11 @@
   padding: 0;
 }
 
+article{
+  height: 20rem;
+  width: 20rem;
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+}
