@@ -1,13 +1,14 @@
 <%- include('./partials/head') %> 
-<% methods.forEach(methods => { %>
+<% methods.forEach(method => { %>
 <article>
-  <h2><%= methods.title %></h2>
+  <h2><%= method.title %></h2>
 
-    <% methods.categories.forEach(category => { %>
-    <p> <%= methods.categories %> </p>    
+    <% method.categories.forEach(category => { %>
+    <p> <%= category.title %> </p>    
     <% }) %> 
 
-  <!-- <img scr="<%= methods.url %>" class="templates" alt="foto van deze werkvorm"> -->
+  <img scr="<%= method.template?.url %>" onerror="this.src='assets\Schoolvakanties Nederland 2023.png'" class="templates" alt="foto van deze werkvorm"/>
 </article>
 <% }) %> 
+
 <%- include('./partials/foot') %>
