@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 // Maak een route voor de index
 app.get("/", (request, response) => {
-  let methodsUrl = url + "/methods?first100";
+  let methodsUrl = url + "/methods?first=100";
   fetchJson(methodsUrl).then((data) => {
     response.render("index", data);
   });
