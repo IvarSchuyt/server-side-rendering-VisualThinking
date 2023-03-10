@@ -2,6 +2,8 @@
 <% methods.forEach(methods => { %>
 <article>
   <h2><%= methods.title %></h2>
+  <p> <%= methods.categories %> </p>
+  <img scr="<%= methods.url %>" class="templates" alt="foto van deze werkvorm">
 </article>
 <% }) %> 
 <%- include('./partials/foot') %>
