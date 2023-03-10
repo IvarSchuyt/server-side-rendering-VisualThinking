@@ -1,4 +1,7 @@
 <%- include('./partials/head') %> 
+
+<h1>Overzicht werkvormen  </h1>
+
 <% methods.forEach(method => { %>
 <article>
   <h2><%= method.title %></h2>
@@ -10,5 +13,6 @@
   <img src="<%= method.template?.url %>" class="templates" alt="foto van deze werkvorm" />
 </article>
 <% }) %> 
+
 
 <%- include('./partials/foot') %>
