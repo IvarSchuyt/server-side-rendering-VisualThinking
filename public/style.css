@@ -1,25 +1,109 @@
+:root {
+  --header-font: rigid-square;
+  --main-font: yrsa;
+  font-size: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--header-font);
+}
+
+h1 {
+  font-size: 3.157rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.369rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.777rem;
+  font-weight: 800;
+}
+
+h4 {
+  font-size: 1.333rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Head----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Head----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Head----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--header-font);
+}
+
+.header-links,
+.header-rechts {
+  display: flex;
+  align-items: center;
+}
+
+.header-links a,
+.header-links h1 {
+  padding: 1rem 0rem 1rem 3rem;
+}
+
+.header-rechts a {
+  padding: 1rem 3rem 1rem 0rem;
+}
+
+/* Index---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Index---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Index---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .layout {
   height: 100%;
   width: 100%;
-
   display: grid;
   grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 1rem 0rem;
 }
 
-article {
+section {
+  height: 25rem;
+  width: 25rem;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
-  height: 25rem;
-  width: 25rem;
+  border: solid 1px black;
+}
+
+.method-title {
+  inline-size: 25rem;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: center;
+  font-family: var(--header-font);
+  font-size: 1.777rem;
+  font-weight: 800;
 }
 
 p {
@@ -48,6 +132,7 @@ p {
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   background: #feb51e;
+  pointer-events: none;
 }
 
 @keyframes span-slide {
