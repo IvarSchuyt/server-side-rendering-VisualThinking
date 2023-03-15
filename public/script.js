@@ -5,7 +5,8 @@ hoverImage.addEventListener("mouseover", showCategories);
 hoverImage.addEventListener("mouseout", hideCategories);
 
 function showCategories() {
-  slideSpan.classList.add("categories-shown");
+  slideSpan.classList.add("categories-shown");  
+  console.log(this);
 }
 
 function hideCategories() {

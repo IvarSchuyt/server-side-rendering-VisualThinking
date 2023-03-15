@@ -96,15 +96,15 @@ section {
   border: solid 1px black;
 }
 
-.method-title {
-  inline-size: 25rem;
-  overflow-wrap: break-word;
-  hyphens: auto;
-  text-align: center;
-  font-family: var(--header-font);
-  font-size: 1.777rem;
-  font-weight: 800;
-}
+  .method-title {
+    inline-size: 25rem;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+    font-family: var(--header-font);
+    font-size: 1.777rem;
+    font-weight: 800;
+  }
 
 p {
   color: black;

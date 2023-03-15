@@ -5,7 +5,7 @@
       <% methods.forEach(method => { %>
       <section>
        <p class="method-title"><%= method.title %></p>
-       <img src="<%= method.template?.url %>" class="template" alt="foto van <%= method.title %>" />
+       <img src="<%= method.template?.url %>" onerror="this.src='assets/logo.svg';" class="template" alt="foto van <%= method.title %>" />
         <% method.categories.forEach(category => { %>
           <span class="categories-hidden"> <%= category.title %> </span>    
         <% }) %> 
