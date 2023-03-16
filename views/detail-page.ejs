@@ -1,5 +1,39 @@
-<%- include('./partials/head-detail-page') %> 
+<%- include('./partials/head') %> 
+<% methods.forEach(method => { %>
 
+<nav class="nav-details">
+<h1> <%= method.title %> </h1>
+    <div class="nav-right">
+        <button class="nav-button button-template">Template</button>
+        <button class="nav-button button-description">Beschrijving</button>
+        <button class="nav-button button-steps">Stappenplan</button>
+        <button class="nav-button button-examples">Voorbeelden</button>
+    </div>
+</nav>
 
+<main class="main-details-content">
 
+    <section class="section-details section-template">
+    <img src="<%= method.template?.url %>" onerror="this.src='assets/logo.svg';" class="image-template" alt="foto van <%= method.title %>" />
+    </section>
+    <section class="section-details section-description">
+    <p class="p-method-description">Met deze werkvorm kan je studenten laten terugblikken en na laten denken over de negative en positieve aspecten van deze periode.
+     De retrospect kan schematisch maar ook in de vorm van een metafoor worden getekend.
+    </p>
+    </section>
+    <section class="section-details section-steps">
+        <% method.steps.forEach(step => { %>
+            <%= step.title %>
+            <%- step.description.html %>
+        <% }) %>  
+    </section>
+    <section class="section-details section-examples">
+        <% method.examples.forEach(example => { %>   
+        <img src="<%= example.url %>" onerror="this.src='assets/logo.svg';" class="image-template" alt="foto van <%= method.title %>" />
+         <% }) %>  
+    </section>
+
+</main>
+
+<% }) %> 
 <%- include('./partials/foot') %>
