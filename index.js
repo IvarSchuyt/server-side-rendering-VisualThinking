@@ -18,13 +18,13 @@ app.get("/", (request, response) => {
   });
 });
 
-app.get("/werkwijze", (request, response) => {
-  let slug = request.query.werkwijzeSlug || "roadmap";
-  let werkwijzeUrl = url + "/werkwijze/" + slug;
-  fetchJson(werkwijzeUrl).then((data) => {
-    response.render("werkwijze", data);
-  });
-});
+// app.get("/werkwijze", (request, response) => {
+//   let slug = request.query.werkwijzeSlug || "roadmap";
+//   let werkwijzeUrl = url + "/werkwijze/" + slug;
+//   fetchJson(werkwijzeUrl).then((data) => {
+//     response.render("werkwijze", data);
+//   });
+// });
 
 // Stel het poortnummer in en start express
 app.set("port", process.env.PORT || 8000);
