@@ -3,7 +3,7 @@
   <div class="layout">
 
       <% methods.forEach(method => { %>
-      <section>
+      <section id="section-main">
        <p class="method-title"><%= method.title %></p>
        <img src="<%= method.template?.url %>" onerror="this.src='assets/logo.svg';" class="image-template" alt="foto van <%= method.title %>" />
         <% method.categories.forEach(category => { %>

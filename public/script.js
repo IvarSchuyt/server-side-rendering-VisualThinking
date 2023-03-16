@@ -1,13 +1,19 @@
-let hoverImage = document.querySelector(".image-template");
-let slideSpan = document.querySelector("span");
+// let hoverImage = document.querySelector(".image-template");
+const current = document.querySelector("#section-main");
+const parent = current.parentNode;
+let slideSpan = parent.querySelector("span");
+let hoverImages = parent.querySelectorAll(".image-template");
 
-hoverImage.addEventListener("mouseover", showCategories);
-hoverImage.addEventListener("mouseout", hideCategories);
+hoverImages.forEach((hoverImage) => {
+  hoverImage.addEventListener("mouseover", showCategories);
+  hoverImage.addEventListener("mouseout", hideCategories);
+});
 
 function showCategories() {
-  slideSpan.classList.add("categories-shown");
   // console.log(this); //this verwijst naar het element waarop wordt gemousovert
   console.log("PARENT", parent.querySelector("span"));
+  slideSpan.classList.add("categories-shown");
+  console.log(this);
 }
 
 function hideCategories() {
