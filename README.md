@@ -27,6 +27,7 @@ De pagina is gemaakt met een database. Om met die database een werkende website 
 npm install + npm install express.
 
 ## Gebruik
+npm start
 
 ## Bronnen
 
