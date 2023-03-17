@@ -30,6 +30,7 @@ npm install + npm install express.
 npm start
 
 ## Bronnen
+https://github.com/fdnd-agency/visual-thinking
 
 ## Licentie
 
