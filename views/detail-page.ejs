@@ -8,6 +8,8 @@
         <button class="nav-button button-description">Beschrijving</button>
         <button class="nav-button button-steps">Stappenplan</button>
         <button class="nav-button button-examples">Voorbeelden</button>
+        <button class="nav-button button-sources">Bronnen</button>
+
     </div>
 </nav>
 
@@ -31,12 +33,29 @@
         <% method.examples.forEach(example => { %>   
         <img src="<%= example.url %>" onerror="this.src='assets/logo.svg';" class="image-example" alt="foto van <%= method.title %>" />
          <% }) %>  
+         <!-- als lengte 0 is, laat placeholder zien -->
     </section>
     <section class="section-details section-sources">
         <% method.sources.forEach(source => { %>   
             <h5 class="header-source"> <%= source.title %> </h5>
             <a href="<%= source.url %>" class="source-link"> <%= source.url %> </a>
          <% }) %> 
+    </section>
+    <section class="section-comments">
+
+  <!-- tekstballon met reactie en auteur -->
+    <div class="comments"><h3>Reacties:</h3>
+    <% comments.forEach(comment => { %>
+    <section>
+      <h4><%= comment.author %></h3>
+      <p><%= comment.text %></p>
+    </section>
+    <% }) %>
+
+
+
+
+
     </section>
 
 </main>
