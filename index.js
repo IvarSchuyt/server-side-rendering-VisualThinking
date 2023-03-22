@@ -24,27 +24,9 @@ app.get("/method/:slug", (request, response) => {
   console.log(id);
 
   fetchJson(detailPageUrl).then((data) => {
-    response.render("new-detail", data);
+    response.render("detail-page", data);
   });
 });
-
-// app.post("/detail-page", function (request, response) {
-//   console.log(request.body);
-//   // request.body.text = "Suggested song: " + request.body.text;
-//   const headers = {
-//     headers: {
-//       Accept: "application/json",
-//       "Content-Type": "application/json",
-//     },
-//     method: "POST",
-//     body: JSON.stringify(request.body),
-//   };
-//   const url = "https://api.visualthinking.fdnd.nl/api/v1/comments";
-
-//   fetchJson(url, headers).then((data) => {
-//     response.redirect(303, "/detail-page");
-//   });
-// });
 
 // Stel het poortnummer in en start express
 app.set("port", process.env.PORT || 8000);

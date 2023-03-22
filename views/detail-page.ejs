@@ -1,5 +1,4 @@
 <%- include('./partials/head') %> 
-<% methods.forEach(method => { %>
 
 <nav class="nav-details">
 <h1> <%= method.title %> </h1>
@@ -41,24 +40,6 @@
             <a href="<%= source.url %>" class="source-link"> <%= source.url %> </a>
          <% }) %> 
     </section>
-    <section class="section-comments">
-
-  <!-- tekstballon met reactie en auteur -->
-    <div class="comments"><h3>Reacties:</h3>
-    <% comments.forEach(comment => { %>
-    <section>
-      <h4><%= comment.author %></h3>
-      <p><%= comment.text %></p>
-    </section>
-    <% }) %>
-
-
-
-
-
-    </section>
 
 </main>
-
-<% }) %> 
 <%- include('./partials/foot') %>
