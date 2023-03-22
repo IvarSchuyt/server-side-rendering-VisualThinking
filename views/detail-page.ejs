@@ -29,8 +29,14 @@
     </section>
     <section class="section-details section-examples">
         <% method.examples.forEach(example => { %>   
-        <img src="<%= example.url %>" onerror="this.src='assets/logo.svg';" class="image-template" alt="foto van <%= method.title %>" />
+        <img src="<%= example.url %>" onerror="this.src='assets/logo.svg';" class="image-example" alt="foto van <%= method.title %>" />
          <% }) %>  
+    </section>
+    <section class="section-details section-sources">
+        <% method.sources.forEach(source => { %>   
+            <h5 class="header-source"> <%= source.title %> </h5>
+            <a href="<%= source.url %>" class="source-link"> <%= source.url %> </a>
+         <% }) %> 
     </section>
 
 </main>
