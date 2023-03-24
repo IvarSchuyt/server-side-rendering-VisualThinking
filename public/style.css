@@ -170,6 +170,11 @@ p {
   margin-left: 3rem;
 }
 
+.image-template-detail-page {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
 .section-details {
   /* border: none; */
   width: 100%;
@@ -183,4 +188,9 @@ p {
 .section-examples {
   display: flex;
   flex-direction: row;
+}
+
+.image-example {
+  max-width: 20rem;
+  max-height: 20rem;
 }
