@@ -51,8 +51,6 @@ server.post("/method/:slug/form", (request, response) => {
   const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/";
   const url = `${baseurl}comments`;
 
-  console.log(request.body);
-
   postJson(url, request.body).then((data) => {
     if (data.success) {
       response.redirect(
