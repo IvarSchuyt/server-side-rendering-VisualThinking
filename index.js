@@ -5,12 +5,12 @@ const url = "https://api.visualthinking.fdnd.nl/api/v1/";
 // Maak een nieuwe express app
 const server = express();
 
-// Stel de public map in
-server.use(express.static("public"));
-
 // Stel de view engine in
 server.set("view engine", "ejs");
 server.set("views", "./views");
+
+// Stel de public map in
+server.use(express.static("public"));
 
 // Stel afhandeling van formulieren inzx
 server.use(express.json());
@@ -29,7 +29,7 @@ server.get("/method/:slug", (request, response) => {
   const id = request.query.id;
 
   fetchJson(detailPageUrl).then((data) => {
-    response.render("detail-page", data);
+    response.render("method", data);
   });
 });
 
@@ -47,25 +47,44 @@ server.get("/method/:slug/form", (request, response) => {
   });
 });
 
+// server.post("/method/:slug/form", (request, response) => {
+//   const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/";
+//   const url = `${baseurl}comments`;
+
+//   postJson(url, request.body).then((data) => {
+//     let newComment = { ...request.body };
+
+//     if (data.success) {
+//       response.redirect(
+//         "/method/" + request.params.slug + "/form?id=" + request.body.methodId
+//       );
+//       // TODO: squad meegeven, message meegeven
+//       // TODO: Toast meegeven aan de homepagina
+//     } else {
+//       response.redirect('/new/?memberPosted=false')
+//       // const errormessage = `${data.message}: Werkt niet:(`;
+//       // const newdata = { error: errormessage, values: newComment };
+
+//       // response.render("form", newdata);
+//     }
+//   });
+// });
+
 server.post("/method/:slug/form", (request, response) => {
   const baseurl = "https://api.visualthinking.fdnd.nl/api/v1/";
   const url = `${baseurl}comments`;
 
-  postJson(url, request.body).then((data) => {
-    let newComment = { ...request.body };
+  console.log(request.body);
 
+  postJson(url, request.body).then((data) => {
     if (data.success) {
       response.redirect(
-        "/method/" + request.params.slug + "/form?id=" + request.body.methodId
+        "/method/" + request.params.slug + "?methodPosted=true"
       );
-      // TODO: squad meegeven, message meegeven
-      // TODO: Toast meegeven aan de homepagina
     } else {
-      // response.redirect('/new/?memberPosted=false')
-      const errormessage = `${data.message}: Werkt niet:(`;
-      const newdata = { error: errormessage, values: newComment };
-
-      response.render("form", newdata);
+      response.redirect(
+        "/method/" + request.params.slug + "?methodPosted=false"
+      );
     }
   });
 });
@@ -85,6 +104,18 @@ server.listen(server.get("port"), function () {
  */
 async function fetchJson(url) {
   return await fetch(url)
+    .then((response) => response.json())
+    .catch((error) => error);
+}
+
+// post json
+
+export async function postJson(url, body) {
+  return await fetch(url, {
+    method: "post",
+    body: JSON.stringify(body),
+    headers: { "Content-Type": "application/json" },
+  })
     .then((response) => response.json())
     .catch((error) => error);
 }
