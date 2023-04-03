@@ -41,6 +41,7 @@ server.get("/method/:slug/form", (request, response) => {
   fetchJson(detailPageUrl).then((data) => {
     fetchJson(commentUrl).then((data2) => {
       const newdata = { detail: data, form: data2, slug: request.params.slug };
+
       response.render("form", newdata);
     });
   });
