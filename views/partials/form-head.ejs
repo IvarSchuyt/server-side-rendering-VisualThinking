@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Visual Thinking</title>
+    <link rel="stylesheet" href="https://use.typekit.net/brx3lyu.css" />
+    <!-- rigid square font -->
+    <link rel="stylesheet" href="https://use.typekit.net/kdb0mcl.css" />
+    <!-- yrsa font -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+ 
+    <header>
+      <div class="header-links">
+        <a href="/" class="link-home">
+        <img src="/assets/logo.svg" alt="klik hier om terug naar de homepagina te gaan" class="vt-logo">
+        </a>
+      </div>
+      <div class="header-rechts">
+        <a href="" class="link-over">Over</a>
+        <a href="" class="link-blog">Blog</a>
+        <a href="" class="link-account">
+        <img src="/assets/account.svg" alt="klik hier om je profiel te bekijken" class="svg-account">
+        </a>
+     </div>
+    </header>
+
+    <nav class="nav-details">
+        <h1> <%= detail.method.title %> </h1>
+            <div class="nav-right">
+                <button class="nav-button button-template">
+                    <a href="/method/<%= detail.method.slug %>/method?id=<%= detail.method.id %>" class="link-template">Template</a> 
+                </button>
+                <button class="nav-button button-description">
+                    <a href="/method/<%= detail.method.slug %>/description?id=<%= detail.method.id %>" class="link-description">Beschrijving</a> 
+                </button>
+                <button class="nav-button button-steps">
+                    <a href="/method/<%= detail.method.slug %>/steps?id=<%= detail.method.id %>" class="link-steps">Stappenplan</a> 
+                </button>
+                <button class="nav-button button-examples">
+                    <a href="/method/<%= detail.method.slug %>/examples?id=<%= detail.method.id %>" class="link-examples">Voorbeelden</a> 
+                </button>
+                <button class="nav-button button-comments"> 
+                    <a href="/method/<%= detail.method.slug %>/form?id=<%= detail.method.id %>" class="link-feedback">Feedback</a> 
+                </button>
+            </div>
+        </nav>
