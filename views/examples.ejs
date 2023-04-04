@@ -1,0 +1,10 @@
+<%- include('./partials/method-head') %> 
+
+<section class="section-details section-examples">
+    <% method.examples.forEach(example => { %>   
+    <img src="<%= example.url %>" onerror="this.src='assets/logo.svg';" class="image-example" alt="foto van <%= method.title %>" />
+     <% }) %>  
+     <!-- als lengte 0 is, laat placeholder zien -->
+</section>
+    
+<%- include('./partials/foot') %>
