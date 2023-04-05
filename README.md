@@ -26,10 +26,12 @@ Deze website is gemaakt met de API/Database van Visual Thinking. Om met die data
 Start met het forken en clonen van deze repository. Als je vervolgens de console opent (control + ` ) voer je 'npm install' en vervolgens 'npm install express' in om de benodigde bestanden te installeren.
 
 ## Gebruik
-npm start
+Dit project gebruikt EJS in plaats van HTML, in principe is het vrijwel hetzelfde en verandert er alleen iets als je de API aanroept. Voor uitleg over het gebruik van EJS, bekijk https://ejs.co/.
 
 ## Bronnen
 https://github.com/fdnd-agency/visual-thinking
+https://api.visualthinking.fdnd.nl/
+https://ejs.co/
 
 ## Licentie
 
