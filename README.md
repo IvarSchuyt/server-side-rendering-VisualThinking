@@ -16,6 +16,8 @@ Deze website is een overzicht van alle werkvormen van Visual Thinking. Ook kan j
 <!-- Voeg een mooie poster visual toe 📸 -->
 ![image](https://user-images.githubusercontent.com/112855849/230031348-514eff4f-6c94-46b6-a4d9-05b76f7471fd.png)
 <!-- Voeg een link toe naar Github Pages 🌐-->
+
+## Link naar de website
 https://lazy-gold-vulture-toga.cyclic.app/
 
 ## Kenmerken
