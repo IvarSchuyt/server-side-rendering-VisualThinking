@@ -32,7 +32,9 @@ Dit project gebruikt EJS in plaats van HTML, in principe is het vrijwel hetzelfd
 
 ## Bronnen
 https://github.com/fdnd-agency/visual-thinking
+
 https://api.visualthinking.fdnd.nl/
+
 https://ejs.co/
 
 ## Licentie
