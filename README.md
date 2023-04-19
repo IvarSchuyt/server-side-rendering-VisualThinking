@@ -25,7 +25,8 @@ https://lazy-gold-vulture-toga.cyclic.app/
 Deze website is gemaakt met de API/Database van Visual Thinking. Om met die database een werkende website te maken heb met node en express gewerkt. Gebruikte talen: EJS, JS en CSS.
 
 ## Installatie
-Start met het forken en clonen van deze repository. Als je vervolgens de console opent (control + ` ) voer je 'npm install' en vervolgens 'npm install express' in om de benodigde bestanden te installeren.
+Start met het forken en clonen van deze repository. Als je vervolgens de console opent (control + ` ) voer je 'npm install' en vervolgens 'npm install express' in om de benodigde bestanden te installeren. 
+Er word in deze repository geen gebruik gemaakt van een .env-bestand. 
 
 ## Gebruik
 Dit project gebruikt EJS in plaats van HTML, in principe is het vrijwel hetzelfde en verandert er alleen iets als je de API aanroept. Voor uitleg over het gebruik van EJS, bekijk https://ejs.co/.
